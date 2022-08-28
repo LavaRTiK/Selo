@@ -45,11 +45,17 @@ namespace Selo
                             {
                                 break;
                             }
-                            Console.Clear();
-                            drawMenu.DrawText();
-                            DrawBorder();
-                            Console.SetCursorPosition(30, selectcursor = selectcursor - 6);
-                            drawMenu.DrawLine();
+                            for (int i = selectcursor; i > selectcursor - 7; i--)
+
+                            {
+                                Console.Clear();
+                                drawMenu.DrawText();
+                                DrawBorder();
+                                Console.SetCursorPosition(30, i);
+                                drawMenu.DrawLine();
+                                Thread.Sleep(1);
+                            }
+                            selectcursor = selectcursor - 6;
                             select--;
                             break;
                         case ConsoleKey.DownArrow:
@@ -57,11 +63,17 @@ namespace Selo
                             {
                                 break;
                             }
-                            Console.Clear();
-                            drawMenu.DrawText();
-                            DrawBorder();
-                            Console.SetCursorPosition(30, selectcursor = selectcursor + 6);
-                            drawMenu.DrawLine();
+                            for (int i = selectcursor; i < selectcursor + 6; i++)
+
+                            {
+                                Console.Clear();
+                                drawMenu.DrawText();
+                                DrawBorder();
+                                Console.SetCursorPosition(30, i);
+                                drawMenu.DrawLine();
+                                Thread.Sleep(1);
+                            }
+                            selectcursor = selectcursor + 6;
                             select++;
                             break;
                         case ConsoleKey.Enter:

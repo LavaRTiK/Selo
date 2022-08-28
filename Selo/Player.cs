@@ -25,14 +25,21 @@ namespace Selo
         static int Count;
         static int Right = 0;
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name {get;set;}
         public int Sum { get; set; }
         public int Money { get; set; }
         public int PravoTusa { get; set; }
 
         public Player(string Name, int Money)
         {
-            this.Name = Name;
+            if (String.IsNullOrWhiteSpace(Name))
+            {
+                this.Name = "Player";
+            }
+            else
+            {
+                this.Name = Name;
+            }
             this.Money = Money;
             Count++;
             Id = Count;
