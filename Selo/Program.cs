@@ -85,7 +85,14 @@ namespace Selo
                             }
                             else if (select == 1)
                             {
-                                //drawMenu.Settings();
+                                Settings settings = new Settings();
+                                Console.Clear();
+                                settings.DrawSettings();
+                                Console.Clear();
+                                drawMenu.DrawText();
+                                DrawBorder();
+                                Console.SetCursorPosition(30, selectcursor);
+                                drawMenu.DrawLine();
                             }
                             else if (select == 2)
                             {

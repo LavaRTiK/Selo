@@ -36,7 +36,7 @@ namespace Selo
                                                     ");
 
         }
-        public void DrawLine()
+        public void DrawLine()//Рисуе линию для выбора
         {
             Console.Write("************************");
         }
