@@ -42,7 +42,7 @@ namespace Selo
                 var a = Console.ReadKey().Key;
                 switch (a)
                 {
-                    case ConsoleKey.UpArrow | ConsoleKey.NumPad8:
+                    case ConsoleKey.UpArrow:
                         if (select == 0)
                         {
                             break;
@@ -50,6 +50,8 @@ namespace Selo
                         for (int i = selectcursor; i > selectcursor - 7; i--)
 
                         {
+                            Console.SetCursorPosition(10, i + 1);
+                            Console.Write("                        ");
                             Console.SetCursorPosition(10, i);
                             DrawLine();
                             Thread.Sleep(1);
@@ -66,9 +68,9 @@ namespace Selo
                         for (int i = selectcursor; i < selectcursor + 6; i++)
 
                         {
-                            Console.SetCursorPosition(10, i-1);
+                            Console.SetCursorPosition(10, i - 1);
                             Console.Write("                        ");
-                            Console.MoveBufferArea(10, 26, 10, 1, 10, 36);
+                            //Console.MoveBufferArea(10, 26, 10, 1, 10, 36);
                             Console.SetCursorPosition(10, i);
                             DrawLine();
                             Thread.Sleep(1);

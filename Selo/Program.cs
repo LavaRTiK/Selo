@@ -37,6 +37,22 @@ namespace Selo
                 drawMenu.DrawLine();
                 while (playgame == 0)
                 {
+                    Console.Clear();
+                    drawMenu.DrawText();
+                    DrawBorder();
+                    if (select == 0)
+                    {
+                        Console.SetCursorPosition(30, 26);
+                    }
+                    else if (select == 1)
+                    {
+                        Console.SetCursorPosition(30, 32);
+                    }
+                    else if (select == 2)
+                    {
+                        Console.SetCursorPosition(30, 38);
+                    }
+                    drawMenu.DrawLine();
                     var a = Console.ReadKey().Key;
                     switch (a)
                     {
@@ -48,9 +64,9 @@ namespace Selo
                             for (int i = selectcursor; i > selectcursor - 7; i--)
 
                             {
-                                Console.Clear();
-                                drawMenu.DrawText();
-                                DrawBorder();
+                                Console.SetCursorPosition(30, i + 1);
+                                Console.Write("                        ");
+                                if (i == selectcursor - 4) { drawMenu.DrawText(); }
                                 Console.SetCursorPosition(30, i);
                                 drawMenu.DrawLine();
                                 Thread.Sleep(1);
@@ -66,12 +82,12 @@ namespace Selo
                             for (int i = selectcursor; i < selectcursor + 6; i++)
 
                             {
-                                Console.Clear();
-                                drawMenu.DrawText();
-                                DrawBorder();
+                                Console.SetCursorPosition(30, i -1);
+                                Console.Write("                        ");
+                                if(i == selectcursor + 3) { drawMenu.DrawText(); }
                                 Console.SetCursorPosition(30, i);
                                 drawMenu.DrawLine();
-                                Thread.Sleep(1);
+                                Thread.Sleep(1); 
                             }
                             selectcursor = selectcursor + 6;
                             select++;
@@ -86,13 +102,7 @@ namespace Selo
                             else if (select == 1)
                             {
                                 Settings settings = new Settings();
-                                Console.Clear();
                                 settings.DrawSettings();
-                                Console.Clear();
-                                drawMenu.DrawText();
-                                DrawBorder();
-                                Console.SetCursorPosition(30, selectcursor);
-                                drawMenu.DrawLine();
                             }
                             else if (select == 2)
                             {

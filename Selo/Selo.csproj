@@ -74,6 +74,7 @@
     <Compile Include="DrawMenu.cs" />
     <Compile Include="GamingArea.cs" />
     <Compile Include="Pixel.cs" />
+    <Compile Include="Play.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
