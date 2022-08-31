@@ -30,15 +30,12 @@ namespace Selo
                 int select = 0;
                 int selectcursor = 27;
                 int playgame = 0;
-                DrawMenu drawMenu = new DrawMenu();
-                drawMenu.DrawText();
-                DrawBorder();
                 Console.SetCursorPosition(30, selectcursor);
-                drawMenu.DrawLine();
                 while (playgame == 0)
                 {
+                    Rusificator rusificator = new Rusificator(new Settings().returnLanguage());
                     Console.Clear();
-                    drawMenu.DrawText();
+                    rusificator.DrawTextMenu();
                     DrawBorder();
                     if (select == 0)
                     {
@@ -52,7 +49,7 @@ namespace Selo
                     {
                         Console.SetCursorPosition(30, 38);
                     }
-                    drawMenu.DrawLine();
+                    rusificator.DrawLine();
                     var a = Console.ReadKey().Key;
                     switch (a)
                     {
@@ -66,9 +63,9 @@ namespace Selo
                             {
                                 Console.SetCursorPosition(30, i + 1);
                                 Console.Write("                        ");
-                                if (i == selectcursor - 4) { drawMenu.DrawText(); }
+                                if (i == selectcursor - 4) { rusificator.DrawTextMenu() ; }
                                 Console.SetCursorPosition(30, i);
-                                drawMenu.DrawLine();
+                                rusificator.DrawLine();
                                 Thread.Sleep(1);
                             }
                             selectcursor = selectcursor - 6;
@@ -84,9 +81,9 @@ namespace Selo
                             {
                                 Console.SetCursorPosition(30, i -1);
                                 Console.Write("                        ");
-                                if(i == selectcursor + 3) { drawMenu.DrawText(); }
+                                if(i == selectcursor + 3) { rusificator.DrawTextMenu();  }
                                 Console.SetCursorPosition(30, i);
-                                drawMenu.DrawLine();
+                                rusificator.DrawLine();
                                 Thread.Sleep(1); 
                             }
                             selectcursor = selectcursor + 6;

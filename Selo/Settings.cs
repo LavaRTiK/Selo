@@ -9,8 +9,8 @@ namespace Selo
 {
     class Settings
     {
-        private const int MapWidth = 30 * 3; //Резмер консольки по точкам В ширину  
-        private const int MapHeight = 20 * 3; //Размер консоли по точкам В висоту запись (ширина,висота)
+        private int MapWidth = 30 * 3; //Резмер консольки по точкам В ширину  
+        private int MapHeight = 20 * 3; //Размер консоли по точкам В висоту запись (ширина,висота)
         private const ConsoleColor BorderColor = ConsoleColor.Gray;
 
         static public int Language = 0;
@@ -94,7 +94,6 @@ namespace Selo
                     case ConsoleKey.RightArrow:
                         if (select == 1)
                         {
-
                             Language++;
                             if (Language > 2) { Language = 0; }
 
@@ -123,31 +122,7 @@ namespace Selo
         }
         void DrawText()
         {
-            new Rusificator(Language).DrawText();
-           // Console.SetCursorPosition(10, 20);
-           // Console.Write(@"
-           // ____  _         
-           /// ___|(_)_______ 
-           //\___ \| |_  / _ \
-           // ___) | |/ /  __/
-           //|____/|_/___\___|
-           //                        ");
-           // Console.SetCursorPosition(10, 26);
-           // Console.Write(@"
-           // _                                             
-           //| |    __ _ _ __   __ _ _   _  __ _  __ _  ___ 
-           //| |   / _` | '_ \ / _` | | | |/ _` |/ _` |/ _ \
-           //| |__| (_| | | | | (_| | |_| | (_| | (_| |  __/
-           //|_____\__,_|_| |_|\__, |\__,_|\__,_|\__, |\___|
-           //                  |___/             |___/      ");
-           // Console.SetCursorPosition(10, 32);
-           // Console.Write(@"
-           // __  __           _      
-           //|  \/  |_   _ ___(_) ___ 
-           //| |\/| | | | / __| |/ __|
-           //| |  | | |_| \__ \ | (__ 
-           //|_|  |_|\__,_|___/_|\___| dont work(sorry)
-           //                               ");
+            new Rusificator(Language).DrawTextSttings();
         }
         public void DrawLine()//Рисуе линию для выбора
         {
