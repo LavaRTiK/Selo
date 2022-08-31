@@ -13,7 +13,7 @@ namespace Selo
         private const int MapHeight = 20 * 3; //Размер консоли по точкам В висоту запись (ширина,висота)
         private const ConsoleColor BorderColor = ConsoleColor.Gray;
 
-        static int Language = 0;
+        static public int Language = 0;
 
 
     public void DrawSettings()
@@ -123,30 +123,31 @@ namespace Selo
         }
         void DrawText()
         {
-            Console.SetCursorPosition(10, 20);
-            Console.Write(@"
-            ____  _         
-           / ___|(_)_______ 
-           \___ \| |_  / _ \
-            ___) | |/ /  __/
-           |____/|_/___\___|
-                                   ");
-            Console.SetCursorPosition(10, 26);
-            Console.Write(@"
-            _                                             
-           | |    __ _ _ __   __ _ _   _  __ _  __ _  ___ 
-           | |   / _` | '_ \ / _` | | | |/ _` |/ _` |/ _ \
-           | |__| (_| | | | | (_| | |_| | (_| | (_| |  __/
-           |_____\__,_|_| |_|\__, |\__,_|\__,_|\__, |\___|
-                             |___/             |___/      ");
-            Console.SetCursorPosition(10, 32);
-            Console.Write(@"
-            __  __           _      
-           |  \/  |_   _ ___(_) ___ 
-           | |\/| | | | / __| |/ __|
-           | |  | | |_| \__ \ | (__ 
-           |_|  |_|\__,_|___/_|\___| dont work(sorry)
-                                          ");
+            new Rusificator(Language).DrawText();
+           // Console.SetCursorPosition(10, 20);
+           // Console.Write(@"
+           // ____  _         
+           /// ___|(_)_______ 
+           //\___ \| |_  / _ \
+           // ___) | |/ /  __/
+           //|____/|_/___\___|
+           //                        ");
+           // Console.SetCursorPosition(10, 26);
+           // Console.Write(@"
+           // _                                             
+           //| |    __ _ _ __   __ _ _   _  __ _  __ _  ___ 
+           //| |   / _` | '_ \ / _` | | | |/ _` |/ _` |/ _ \
+           //| |__| (_| | | | | (_| | |_| | (_| | (_| |  __/
+           //|_____\__,_|_| |_|\__, |\__,_|\__,_|\__, |\___|
+           //                  |___/             |___/      ");
+           // Console.SetCursorPosition(10, 32);
+           // Console.Write(@"
+           // __  __           _      
+           //|  \/  |_   _ ___(_) ___ 
+           //| |\/| | | | / __| |/ __|
+           //| |  | | |_| \__ \ | (__ 
+           //|_|  |_|\__,_|___/_|\___| dont work(sorry)
+           //                               ");
         }
         public void DrawLine()//Рисуе линию для выбора
         {
@@ -193,6 +194,10 @@ namespace Selo
             DrawText();
             DrawBorder();
 
+        }
+         public int returnLanguage()
+        {
+            return Language;
         }
 
     }
