@@ -70,7 +70,6 @@ namespace Selo
                         {
                             Console.SetCursorPosition(10, i - 1);
                             Console.Write("                        ");
-                            //Console.MoveBufferArea(10, 26, 10, 1, 10, 36);
                             Console.SetCursorPosition(10, i);
                             DrawLine();
                             Thread.Sleep(1);
