@@ -92,8 +92,7 @@ namespace Selo
                         case ConsoleKey.Enter:
                             if (select == 0)
                             {
-                                playgame++;
-                                Console.Clear();
+                                new Play().PlayGame();
                                 break;
                             }
                             else if (select == 1)

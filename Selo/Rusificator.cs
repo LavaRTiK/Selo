@@ -13,6 +13,10 @@ namespace Selo
         {
             this.Language = Language;
         }
+        public Rusificator()
+        {
+
+        }
 
         public void DrawTextSttings()
         {
@@ -209,6 +213,17 @@ namespace Selo
         public void DrawLine()//Рисуе линию для выбора
         {
             Console.Write("************************");
+        }
+        public void BlackJack()
+        {
+            Console.SetCursorPosition(20, 20);
+            Console.Write(@"                                              
+                     ____  _            _       _            _    
+                    | __ )| | __ _  ___| | __  | | __ _  ___| | __
+                    |  _ \| |/ _` |/ __| |/ /  | |/ _` |/ __| |/ /
+                    | |_) | | (_| | (__|   < |_| | (_| | (__|   < 
+                    |____/|_|\__,_|\___|_|\_\___/ \__,_|\___|_|\_\
+                          ");
         }
     }
 }
