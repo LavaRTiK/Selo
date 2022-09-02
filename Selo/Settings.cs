@@ -88,6 +88,11 @@ namespace Selo
                             Language--;
                             if (Language < 0) { Language = 2; }
                         }
+                        else if (select == 0)
+                        {
+                            //size++;
+                            //if(size < 0){size = 2;}
+                        }
                         break;
 
                     case ConsoleKey.RightArrow:
@@ -96,6 +101,11 @@ namespace Selo
                             Language++;
                             if (Language > 2) { Language = 0; }
 
+                        }
+                        else if (select  == 0)
+                        {
+                            //size--
+                            //if(size > 2) {Size = 0;}
                         }
 
                         break;

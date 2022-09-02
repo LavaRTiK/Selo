@@ -13,16 +13,21 @@ namespace Selo
         public int Sum { get; set; }
         public int PravoTusa { get; set; }
 
-        public Diler(string Name, int Sum)
+        public Diler()
         {
-            this.Name = Name;
-            this.Sum = Sum;
+
         }
         public override string ToString()
         {
             return ($"Имя:{Name} Сумма{Sum}");
         }
 
+        public void DillerPlay()
+        {
+
+            Start();
+            RuleDiller();
+        }
         public void GetCards()
         {
             int a = random.Next(2, 12);
@@ -51,9 +56,19 @@ namespace Selo
         }
         public void RuleDiller()
         {
-            if (Sum < 17)
+            while (Sum < 17) 
             {
                 GetCards();
+                if (Sum > 21 & PravoTusa == 0)
+                {
+                    Sum = -1;
+                }
+                else if (PravoTusa > 0)
+                {
+                    Tus();
+                    PravoTusa--;
+                }
+                
             }
             
         }
