@@ -112,6 +112,8 @@ namespace Selo
                 }
                 Console.Clear();
                 player1.PravoTusa = 0;
+                diler.PravoTusa = 0;
+                
             }
             void PlayerDisplay()
             {

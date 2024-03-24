@@ -60,6 +60,10 @@ namespace Selo
         {
             while (Sum < 17) 
             {
+                if(Sum == -1)
+                {
+                    return;
+                }
                 GetCards();
                 if (Sum > 21 & PravoTusa == 0)
                 {
