@@ -39,7 +39,6 @@ namespace Selo
                 while (run)
                 {
 
-
                     //Control
                     var c = Console.ReadKey().Key;
                     switch (c)
@@ -52,6 +51,7 @@ namespace Selo
                             break;
                         case ConsoleKey.Escape:
                             game = false;
+                            run = false;
                             break;
                     }
                     if (player1.Sum > 21)
@@ -96,21 +96,22 @@ namespace Selo
                 {
                     Console.SetCursorPosition(40, 20);
                     Console.WriteLine("Diller WINSS");
-                    Thread.Sleep(3000);
+                    Thread.Sleep(2000);
                 }
                 else if (player1.Sum > diler.Sum)
                 {
                     Console.SetCursorPosition(40, 20);
                     Console.WriteLine(player1.Name + "Winns");
-                    Thread.Sleep(3000);
+                    Thread.Sleep(2000);
                 }
                 else if (player1.Sum == diler.Sum)
                 {
                     Console.SetCursorPosition(40, 20);
                     Console.WriteLine("NICHIYA");
-                    Thread.Sleep(3000);
+                    Thread.Sleep(2000);
                 }
                 Console.Clear();
+                player1.PravoTusa = 0;
             }
             void PlayerDisplay()
             {

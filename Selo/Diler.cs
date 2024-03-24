@@ -12,6 +12,8 @@ namespace Selo
         public string Name { get; set; }
         public int Sum { get; set; }
         public int PravoTusa { get; set; }
+        
+        public int[] cardsdiller { get; set; }
 
         public Diler()
         {
